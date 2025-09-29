@@ -23,7 +23,7 @@ if(NOT
   af_dep_check_and_populate(${boost_prefix}
     URL_AND_HASH
     URI https://github.com/boostorg/compute/archive/boost-${VER}.tar.gz
-    REF MD5=e160ec0ff825fc2850ea4614323b1fb5
+    REF MD5=f25b7640c0dc1b1a884c48b95c4b5417
   )
   if(NOT TARGET Boost::boost)
     add_library(Boost::boost IMPORTED INTERFACE GLOBAL)
