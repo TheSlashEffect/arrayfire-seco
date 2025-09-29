@@ -16,7 +16,7 @@ if(NOT
    (Boost_VERSION_MACRO VERSION_GREATER Boost_MIN_VER OR
     Boost_VERSION_MACRO VERSION_EQUAL Boost_MIN_VER))
   AND NOT AF_WITH_EXTERNAL_PACKAGES_ONLY)
-  set(VER 1.70.0)
+  set(VER 1.78.0)
   message(WARNING
       "WARN: Found Boost v${Boost_MAJOR_VERSION}.${Boost_MINOR_VERSION}."
       "Minimum required ${VER}. Build will download Boost Compute.")

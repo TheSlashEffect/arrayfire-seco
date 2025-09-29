@@ -78,7 +78,7 @@ find_package(fmt QUIET ${AF_REQUIRED})
 find_package(span-lite QUIET)
 find_package(GTest)
 find_package(CLBlast QUIET)
-find_package(Boost 1.70 ${AF_REQUIRED})
+find_package(Boost 1.78 ${AF_REQUIRED})
 
 # CLFFT used in ArrayFire requires a specific fork
 #find_package(clFFT QUIET)
