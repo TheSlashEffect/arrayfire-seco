@@ -5,9 +5,16 @@
 # The complete license agreement can be obtained at:
 # http://arrayfire.com/licenses/BSD-3-Clause
 
+# --- Yocto patch start ---
+if(DEFINED ENV{STAGING_INCDIR} AND DEFINED ENV{STAGING_LIBDIR})
+    set(BOOST_INCLUDEDIR $ENV{STAGING_INCDIR} CACHE PATH "Boost include dir forced by Yocto" FORCE)
+    set(BOOST_LIBRARYDIR $ENV{STAGING_LIBDIR} CACHE PATH "Boost library dir forced by Yocto" FORCE)
+    set(BOOST_ROOT ${BOOST_INCLUDEDIR}/.. CACHE PATH "Boost root forced by Yocto" FORCE)
+endif()
+# --- Yocto patch end ---
+
 set(Boost_MIN_VER 107000)
 set(Boost_MIN_VER_STR "1.70")
-set(BOOST_ROOT "${CMAKE_FIND_ROOT_PATH}/usr" CACHE PATH "Boost root" FORCE)
 
 if(NOT
   ((Boost_VERSION VERSION_GREATER Boost_MIN_VER OR
