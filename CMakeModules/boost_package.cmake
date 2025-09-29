@@ -7,6 +7,7 @@
 
 set(Boost_MIN_VER 107000)
 set(Boost_MIN_VER_STR "1.70")
+set(BOOST_ROOT "${CMAKE_FIND_ROOT_PATH}/usr" CACHE PATH "Boost root" FORCE)
 
 if(NOT
   ((Boost_VERSION VERSION_GREATER Boost_MIN_VER OR
